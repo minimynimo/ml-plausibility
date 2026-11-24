@@ -1,0 +1,20 @@
+--- Functions/Optimisation functions/my_cmaes.m
++++ Functions/Optimisation functions/my_cmaes.m
+@@ -728,7 +728,7 @@
+       for namecell = filenames(:)'
+         name = namecell{:};
+ 
+-	[fid, err] = fopen(['./' filenameprefix name '.dat'], 'w');
++	[fid, err] = fopen([filenameprefix name '.dat'], 'w');
+ 	if fid < 1 % err ~= 0 
+ 	  warning(['could not open ' filenameprefix name '.dat']);
+ 	  filenames(find(strcmp(filenames,name))) = [];
+@@ -1612,7 +1612,7 @@
+       for namecell = filenames(:)'
+         name = namecell{:};
+ 
+-	[fid, err] = fopen(['./' filenameprefix name '.dat'], 'a');
++	[fid, err] = fopen([filenameprefix name '.dat'], 'a');
+ 	if fid < 1 % err ~= 0 
+ 	  warning(['could not open ' filenameprefix name '.dat']);
+ 	else
