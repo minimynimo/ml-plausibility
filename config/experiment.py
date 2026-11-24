@@ -27,7 +27,6 @@ HBV_MAT_ROOT = DATA_ROOT / "hbv_mat"                            # per-basin .mat
 BASIN_LIST_DIR = DATA_ROOT / "basin_lists"                      # 01_data_prep/3
 ATTRIBUTE_CSV = DATA_ROOT / "attributes" / "camels_original_attribute_combined.csv"   # 01_data_prep/2
 POOL_CSV = BASIN_LIST_DIR / "us_camels_file_num.csv"            # complete-data basins (01_data_prep/3)
-NEWMAN_531_LIST = DATA_ROOT / "reference" / "basin_list.txt"    # Newman et al. (2017) 531-basin list
 # Basins dropped from the training pool by hand (01_data_prep/3_basin_filter.py), with the reason.
 EXCLUDED_BASINS = {
     "10173450": "no row in the static-attribute table used when the study pool was fixed; kept out so "

@@ -36,8 +36,7 @@ bs["in_eval_set"] = bs["gauge_id"].map(ok).fillna(False).astype(bool)
 bs["eval_exclusion_reason"] = bs["gauge_id"].map(reasons).fillna("")
 bs.to_csv(E.BASIN_SETS_CSV, index=False)
 n = int(bs["in_eval_set"].sum())
-msg = (f"evaluation set: {n} of {len(pool)} pool basins "
-       f"({int((bs['in_eval_set'] & bs['in_531_subset']).sum())} also in the 531 subset); "
+msg = (f"evaluation set: {n} of {len(pool)} pool basins; "
        f"excluded {len(pool) - n}: {dict(list(reasons.items())[:20])}")
 print(msg)
 E.LOG_DIR.mkdir(parents=True, exist_ok=True)

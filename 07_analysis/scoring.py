@@ -21,7 +21,7 @@ from scipy import stats
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from config import experiment as E  # noqa: E402
 from core import runio  # noqa: E402
-from core.io import load_basin_sets, load_camels_signatures, load_eval_set, load_forcing  # noqa: E402
+from core.io import load_camels_signatures, load_eval_set, load_forcing  # noqa: E402
 from core.metrics import kge_parts  # noqa: E402
 from core.registry import combos, runs_of  # noqa: E402
 
@@ -76,7 +76,7 @@ def iqr(x):
     return float(np.nanpercentile(x, 75) - np.nanpercentile(x, 25))
 
 
-def accuracy(basins, obs, subset_531):
+def accuracy(basins, obs):
     per_basin, summary, seedtab = [], [], []
     for key in combos():
         sims = load_combo(key, "og", basins)
@@ -119,7 +119,6 @@ def accuracy(basins, obs, subset_531):
         return out
 
     summ = summarise(pb, "")
-    summarise(pb[pb["basin"].isin(subset_531)], "_531subset")
     wilcoxon(pb[pb.period == "test"])
     drop = rf_drop_rule(summ)
     return pb, summ, drop
@@ -765,14 +764,12 @@ def main():
     for d in [OUT_ACC, OUT_MASS, OUT_DROUGHT, OUT_FLOOD, OUT_SCORE]:
         d.mkdir(parents=True, exist_ok=True)
     basins = load_eval_set()
-    bs = load_basin_sets()
-    subset_531 = [b for b in basins if bs.loc[b, "in_531_subset"]]
     sig = load_camels_signatures()
     sig.index = sig.index.astype(str).str.zfill(8)
     forc = {b: load_forcing(b) for b in basins}
     obs = pd.DataFrame({b: forc[b][E.Q_COL] for b in basins})
     print(f"scoring on {len(basins)} evaluation basins")
-    pb_acc, acc_summary, rf_drop = accuracy(basins, obs, subset_531)
+    pb_acc, acc_summary, rf_drop = accuracy(basins, obs)
     print("accuracy done", flush=True)
     m, _ = mass(basins, obs, forc)
     print("mass done", flush=True)
