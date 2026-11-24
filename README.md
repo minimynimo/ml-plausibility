@@ -1,6 +1,8 @@
 # ml-plausibility
 
-Code for a study of the **physical plausibility of machine-learning streamflow models** on CAMELS-US.
+Code for the preprint "_Does Higher Accuracy Mean Greater Physical Plausibility in Machine Learning Rainfall-Runoff Models?_". 
+
+Its work focuses on **physical plausibility of machine-learning streamflow models** using CAMELS-US.
 Four ML models (RF, XGB, TCN, LSTM), each trained per basin (*individual*), on all basins together
 (*regional*) and, for the networks, regional fine-tuned per basin (*adapted*), are compared with a
 per-basin calibrated conceptual model (HBV, MARRMoT). Beyond accuracy (KGE/NSE), every model is driven
@@ -11,8 +13,8 @@ The repository contains code only. Input data, model outputs and figures are not
 
 ## Study design
 
-| | |
-|---|---|
+| Data & Variables | Description |
+| --- | --- |
 | Basins | 637 CAMELS-US basins with complete discharge, precipitation, temperature and PET from 1987-01-01 to 2006-12-31 (list: `basins/basin_sets.csv`) |
 | Inputs | Daymet basin-mean P and T (mean of tmax/tmin), Priestley–Taylor PET computed from Daymet; 27 static CAMELS attributes for regional/adapted models |
 | Periods | warm-up 1987, train ("cal") 1988–1997, validation 1998–2000 (early stopping / HP selection only), test 2001–2006 |
@@ -50,8 +52,7 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt          # Python 3.12; install the torch build that matches your CUDA
 ```
 
-HBV additionally needs MATLAB and MARRMoT v2.1.2 (see [HBV](#5-hbv)). Figures use IBM Plex Sans if it is
-installed or its `.ttf` files are put in `config/fonts/`; otherwise matplotlib falls back to DejaVu Sans.
+HBV additionally needs MATLAB and MARRMoT v2.1.2 (see [HBV](#5-hbv)). 
 
 ## Data
 
