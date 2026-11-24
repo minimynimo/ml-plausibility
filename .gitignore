@@ -1,0 +1,20 @@
+# inputs, outputs and figures stay local (created inside the repo, never committed)
+data/*
+!data/README.md
+out/
+fig/
+05_hbv/MARRMoT/
+config/fonts/
+
+# figure and table files anywhere in the repo
+*.png
+*.pdf
+*.csv
+# ...except the study basin lists
+!basins/*.csv
+
+__pycache__/
+*.pyc
+*.log
+.ipynb_checkpoints/
+.DS_Store
