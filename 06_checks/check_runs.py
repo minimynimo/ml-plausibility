@@ -1,4 +1,4 @@
-"""Completeness check: every run of the matrix (hsp.registry) has finished and has the
+"""Completeness check: every run of the matrix (core.registry) has finished and has the
 real-forcing output plus every synthetic scenario, for every basin it should cover, over the right
 window. Any missing file or basin stops with an error naming it (never converted to a rank)."""
 import sys
@@ -8,9 +8,9 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from config import experiment as E  # noqa: E402
-from hsp import runio  # noqa: E402
-from hsp.io import load_basin_pool  # noqa: E402
-from hsp.registry import expected_runs  # noqa: E402
+from core import runio  # noqa: E402
+from core.io import load_basin_pool  # noqa: E402
+from core.registry import expected_runs  # noqa: E402
 
 pool = set(load_basin_pool())
 hbv_failed = set(pd.read_csv(E.HBV_FAILURES_CSV, dtype={"gauge_id": str})["gauge_id"]) if E.HBV_FAILURES_CSV.exists() else set()

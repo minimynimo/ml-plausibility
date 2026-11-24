@@ -3,7 +3,7 @@
   tune : grid search on the VAL period (fit on TRAIN only); selection = median over basins of VAL NSE.
          Writes OUT_ROOT/tuning/<MODEL>_<strategy>/{grid.csv, selected.json}.
   final: one run per seed with the selected hyperparameters; predicts the real-forcing period and
-         every synthetic scenario; writes the standard run directory (hsp.runio).
+         every synthetic scenario; writes the standard run directory (core.runio).
 
 Targets are per-basin z-scored discharge (TRAIN mean/std); objective = plain squared error.
 XGB stops early on the VAL period (no refit on TRAIN+VAL).
@@ -26,10 +26,10 @@ from joblib import Parallel, delayed
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from config import experiment as E  # noqa: E402
 from features.tree_features import build_features, feature_names  # noqa: E402
-from hsp.io import (basin_scalers, load_basin_pool, load_forcing, load_static_attributes,  # noqa: E402
+from core.io import (basin_scalers, load_basin_pool, load_forcing, load_static_attributes,  # noqa: E402
                     scenario_frame)
-from hsp.metrics import nse  # noqa: E402
-from hsp import runio  # noqa: E402
+from core.metrics import nse  # noqa: E402
+from core import runio  # noqa: E402
 
 TUNE_DIR = E.OUT_ROOT / "tuning"
 

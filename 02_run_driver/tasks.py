@@ -42,7 +42,7 @@ def run_done(model, strategy, seed, tag=""):
 
 def parts_done(model, strategy, seed, worker, n_workers, tag=""):
     def f():
-        from hsp.io import load_basin_pool
+        from core.io import load_basin_pool
         rd = E.run_dir(model, strategy, seed, tag)
         return all((rd / "parts" / f"{b}.parquet").exists() for b in load_basin_pool()[worker::n_workers])
     return f

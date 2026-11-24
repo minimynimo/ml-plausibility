@@ -29,9 +29,9 @@ import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from config import experiment as E  # noqa: E402
-from hsp.io import basin_scalers, load_basin_pool, load_forcing, load_static_attributes, scenario_frame  # noqa: E402
-from hsp.metrics import nse  # noqa: E402
-from hsp import runio  # noqa: E402
+from core.io import basin_scalers, load_basin_pool, load_forcing, load_static_attributes, scenario_frame  # noqa: E402
+from core.metrics import nse  # noqa: E402
+from core import runio  # noqa: E402
 from models.networks import EALSTM, LSTMIndiv, NSELoss, TCN  # noqa: E402
 
 warnings.filterwarnings("ignore", message="RNN module weights are not part")

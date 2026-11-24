@@ -34,7 +34,7 @@ Scope
     day-of-year or snow-proxy input) -- comparisons across model types are therefore restricted to
     the four shared families, and this is reported as a known limitation.
 
-The basin sample is drawn from hsp.io.load_eval_set() (basins/basin_sets.csv `in_eval_set`), so run
+The basin sample is drawn from core.io.load_eval_set() (basins/basin_sets.csv `in_eval_set`), so run
 this after 07_analysis/eval_set.py. HBV is not explained here (no engineered feature set to attribute).
 
 Every number this script computes is saved to ANALYSIS_DIR/shap/*.csv|json; 08_figures/fig02_s02_shap.py
@@ -56,8 +56,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "03_train"))
 from config import experiment as E  # noqa: E402
 from features.tree_features import FAMILIES, STATIC_FAMILIES, build_features, family_map, feature_names  # noqa: E402
-from hsp.io import load_basin_pool, load_camels_signatures, load_eval_set, load_forcing, load_static_attributes  # noqa: E402
-from hsp.registry import tcn_tag  # noqa: E402
+from core.io import load_basin_pool, load_camels_signatures, load_eval_set, load_forcing, load_static_attributes  # noqa: E402
+from core.registry import tcn_tag  # noqa: E402
 import trees as TR  # noqa: E402  (03_train/trees.py)
 # NOTE: nets (03_train/nets.py, and therefore torch) is imported lazily, inside nn_model() only.
 # Importing torch at module level breaks joblib/loky's fork-based worker pool for tree_model's

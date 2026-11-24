@@ -15,8 +15,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "07_analysis"))
 import common as P  # noqa: E402
 from common import T, vs, ctx, col, split, short, STRAT_MK  # noqa: E402
 import scoring as S  # noqa: E402
-from hsp.io import load_eval_set  # noqa: E402
-from hsp.registry import combos  # noqa: E402
+from core.io import load_eval_set  # noqa: E402
+from core.registry import combos  # noqa: E402
 
 DIMS = ["mass", "drought", "flood"]
 SQ3 = np.sqrt(3) / 2

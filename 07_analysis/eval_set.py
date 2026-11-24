@@ -9,10 +9,10 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from config import experiment as E  # noqa: E402
-from hsp import runio  # noqa: E402
-from hsp.io import load_basin_pool, load_forcing  # noqa: E402
-from hsp.metrics import kge_parts  # noqa: E402
-from hsp.registry import combos, runs_of  # noqa: E402
+from core import runio  # noqa: E402
+from core.io import load_basin_pool, load_forcing  # noqa: E402
+from core.metrics import kge_parts  # noqa: E402
+from core.registry import combos, runs_of  # noqa: E402
 
 pool = load_basin_pool()
 obs = pd.DataFrame({b: load_forcing(b)[E.Q_COL] for b in pool}).loc[E.TEST[0]:E.TEST[1]]

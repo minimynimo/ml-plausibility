@@ -16,9 +16,9 @@ from matplotlib.colors import to_rgb  # noqa: E402
 from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import Patch  # noqa: E402
 from config import experiment as E  # noqa: E402
-from hsp import runio  # noqa: E402
-from hsp.io import load_eval_set, load_forcing  # noqa: E402
-from hsp.registry import combos, runs_of  # noqa: E402
+from core import runio  # noqa: E402
+from core.io import load_eval_set, load_forcing  # noqa: E402
+from core.registry import combos, runs_of  # noqa: E402
 from config import plot_style as vs  # noqa: E402
 
 FIG = E.FIG_DIR / "test_fig"   # only used by fig05(heatmap=True); paper figures go to FIG_DIR

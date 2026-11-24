@@ -19,7 +19,7 @@ CORES=${1:-40}   # concurrent single-threaded MATLAB processes
 eval "$($PY - <<EOF
 import sys; sys.path.insert(0, "$REPO")
 from config import experiment as E
-from hsp.io import load_basin_pool
+from core.io import load_basin_pool
 out = E.OUT_ROOT / "runs" / "HBV" / "individual" / E.run_name("HBV", "individual", E.HBV_OPTIMISER_SEED) / "matlab"
 out.mkdir(parents=True, exist_ok=True)
 (out / "basin_list.txt").write_text("\n".join(load_basin_pool()) + "\n")

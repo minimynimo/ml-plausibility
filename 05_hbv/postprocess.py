@@ -9,8 +9,8 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from config import experiment as E  # noqa: E402
-from hsp import runio  # noqa: E402
-from hsp.io import load_basin_pool, load_forcing  # noqa: E402
+from core import runio  # noqa: E402
+from core.io import load_basin_pool, load_forcing  # noqa: E402
 
 rd = E.run_dir("HBV", "individual", E.HBV_OPTIMISER_SEED)
 mat = rd / "matlab"

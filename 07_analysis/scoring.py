@@ -20,10 +20,10 @@ from scipy import stats
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from config import experiment as E  # noqa: E402
-from hsp import runio  # noqa: E402
-from hsp.io import load_basin_sets, load_camels_signatures, load_eval_set, load_forcing  # noqa: E402
-from hsp.metrics import kge_parts  # noqa: E402
-from hsp.registry import combos, runs_of  # noqa: E402
+from core import runio  # noqa: E402
+from core.io import load_basin_sets, load_camels_signatures, load_eval_set, load_forcing  # noqa: E402
+from core.metrics import kge_parts  # noqa: E402
+from core.registry import combos, runs_of  # noqa: E402
 
 OUT_ACC = E.ANALYSIS_ACCURACY_DIR
 OUT_MASS = E.ANALYSIS_MASS_DIR
@@ -538,7 +538,7 @@ def flood(basins, obs, forc, sig):
                 ev = slice(src_date - pd.Timedelta(days=1), src_date + pd.Timedelta(days=7))
                 o_pk, s_pk = obs[b].loc[ev].max(), og[seed][b].loc[ev].max()
                 for d in E.STORM_DURATIONS:
-                    # storm runs use Temp_at_peak (hsp.io); equal P every storm day -> snow fraction = day fraction
+                    # storm runs use Temp_at_peak (core.io); equal P every storm day -> snow fraction = day fraction
                     t_storm = fb["Temp_at_peak"].loc[s0:s0 + pd.Timedelta(days=d - 1)].to_numpy()
                     snow_frac = float(np.mean(t_storm <= SNOW_T))
                     peaks, rcs, inc, frac, lag = [], [], [], [], []

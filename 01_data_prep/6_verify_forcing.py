@@ -17,7 +17,7 @@ from joblib import Parallel, delayed
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from config import experiment as E  # noqa: E402
-from hsp.io import load_basin_pool  # noqa: E402
+from core.io import load_basin_pool  # noqa: E402
 
 MAT = {
     "og": E.HBV_MAT_ROOT / "MARRMoT_InputData_US_v212" / "varssim_{g}.mat",
