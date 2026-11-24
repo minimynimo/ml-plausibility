@@ -1,0 +1,12 @@
+# Versions used for the study (Python 3.12). torch: install the build matching your CUDA version.
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+xgboost==3.4.1
+torch==2.11.0
+shap==0.51.0
+captum==0.9.0
+joblib==1.5.3
+pyarrow==24.0.0
+matplotlib==3.10.8
