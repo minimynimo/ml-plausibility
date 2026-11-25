@@ -1,0 +1,12 @@
+Model,Strategy,Elasticity 1-day (median),Elasticity 1-day (IQR),Elasticity 3-day (median),Elasticity 3-day (IQR),Elasticity 5-day (median),Elasticity 5-day (IQR)
+HBV,individual,1.33,1.18 to 1.60,1.20,1.10 to 1.45,1.13,1.05 to 1.34
+RF,individual,0.67,0.31 to 1.14,0.08,0.03 to 0.30,0.04,0.01 to 0.10
+RF,regional,1.29,0.83 to 1.82,0.55,0.29 to 0.96,0.40,0.21 to 0.79
+XGB,individual,0.78,0.37 to 1.38,0.16,0.04 to 0.46,0.07,0.00 to 0.22
+XGB,regional,1.21,0.75 to 1.68,0.52,0.36 to 0.78,0.34,0.23 to 0.53
+TCN,individual,1.29,1.09 to 1.60,1.08,1.02 to 1.16,1.03,0.98 to 1.09
+TCN,regional,1.54,1.20 to 2.00,1.13,0.99 to 1.42,1.06,0.94 to 1.23
+TCN,adapted,1.54,1.21 to 2.03,1.13,0.98 to 1.40,1.06,0.94 to 1.24
+LSTM,individual,0.69,0.43 to 1.01,0.15,0.06 to 0.33,0.07,0.02 to 0.21
+LSTM,regional,1.63,1.03 to 2.25,0.78,0.30 to 1.35,0.66,0.23 to 1.04
+LSTM,adapted,1.62,0.99 to 2.29,0.77,0.27 to 1.35,0.65,0.21 to 1.05

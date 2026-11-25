@@ -1,0 +1,13 @@
+Model,Strategy,Creates water: model [n],Creates water: also observed [n],Creates water: of model flags also observed [%],Creates water: observed flags reproduced [%],Loses water: model [n],Loses water: also observed [n],Loses water: of model flags also observed [%],Loses water: observed flags reproduced [%]
+HBV,individual,0,0,,0.00,27,21,77.78,42.00
+RF,individual,13,9,69.23,75.00,30,24,80.00,48.00
+RF,regional,16,9,56.25,75.00,26,22,84.62,44.00
+XGB,individual,13,9,69.23,75.00,31,25,80.65,50.00
+XGB,regional,14,9,64.29,75.00,29,24,82.76,48.00
+TCN,individual,15,9,60.00,75.00,65,37,56.92,74.00
+TCN,regional,12,9,75.00,75.00,44,33,75.00,66.00
+TCN,adapted,12,9,75.00,75.00,47,35,74.47,70.00
+LSTM,individual,14,10,71.43,83.33,62,35,56.45,70.00
+LSTM,regional,13,9,69.23,75.00,41,31,75.61,62.00
+LSTM,adapted,14,9,64.29,75.00,33,27,81.82,54.00
+Observed,,12 (1.88 %),,,,50 (7.85 %),,,

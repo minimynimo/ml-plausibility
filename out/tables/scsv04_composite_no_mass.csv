@@ -1,0 +1,12 @@
+Model,Strategy,"Composite (mass, drought, flood)","Rank, all","Rank, ML only","Composite without mass (drought, flood)","Rank without mass, all","Rank without mass, ML only"
+HBV,individual,0.72,1,,0.58,1,
+RF,individual,0.38,8,7,0.08,8,7
+RF,regional,0.43,5,4,0.16,5,4
+XGB,individual,0.37,9,8,0.06,10,9
+XGB,regional,0.36,10,9,0.05,11,10
+TCN,individual,0.50,2,1,0.28,2,1
+TCN,regional,0.48,4,3,0.23,4,3
+TCN,adapted,0.48,3,2,0.23,3,2
+LSTM,individual,0.36,11,10,0.07,9,8
+LSTM,regional,0.40,6,5,0.12,6,5
+LSTM,adapted,0.40,7,6,0.12,7,6

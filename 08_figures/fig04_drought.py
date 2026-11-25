@@ -1,7 +1,7 @@
 """fig04  drought: late flow, example hydrographs (seed 42), zero-rain vs observed recession timescale
 Tables: csv04_drought
 
-Outputs: fig/<name>.png, fig/pdf/<name>.pdf, fig/<table>.csv
+Outputs: fig/<name>.png, fig/pdf/<name>.pdf, out/tables/<table>.csv
 Usage: python 08_figures/fig04_drought.py [fig04 csv04]   (no args = all)
 """
 import sys

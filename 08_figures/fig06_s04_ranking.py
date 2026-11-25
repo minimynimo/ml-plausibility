@@ -2,7 +2,7 @@
 s04    ranking sensitivity, ML only: weighted-product surfaces, rank shares, drought left out
 Tables: scsv04_composite_no_mass
 
-Outputs: fig/<name>.png, fig/pdf/<name>.pdf, fig/<table>.csv
+Outputs: fig/<name>.png, fig/pdf/<name>.pdf, out/tables/<table>.csv
 Usage: python 08_figures/fig06_s04_ranking.py [fig06 s04 scsv04]   (no args = all)
 """
 import sys

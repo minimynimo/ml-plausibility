@@ -1,8 +1,8 @@
-# inputs, outputs and figures stay local (created inside the repo, never committed)
+# inputs and model outputs stay local (created inside the repo, never committed)
 data/*
 !data/README.md
-out/
-fig/
+out/*
+!out/tables/
 05_hbv/MARRMoT/
 config/fonts/
 
@@ -10,8 +10,11 @@ config/fonts/
 *.png
 *.pdf
 *.csv
-# ...except the study basin lists
+# ...except the study basin lists and the paper figures and tables
 !basins/*.csv
+!fig/*.png
+!fig/pdf/*.pdf
+!out/tables/*.csv
 
 __pycache__/
 *.pyc

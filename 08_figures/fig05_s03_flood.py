@@ -2,7 +2,7 @@
 s03    flood-flag example hydrographs, mean lag per storm duration, flood checks F4-F5
 Tables: csv05a_flood_elasticity, csv05d_flood_speed_3day
 
-Outputs: fig/<name>.png, fig/pdf/<name>.pdf, fig/<table>.csv
+Outputs: fig/<name>.png, fig/pdf/<name>.pdf, out/tables/<table>.csv
 Usage: python 08_figures/fig05_s03_flood.py [fig05 s03 csv05]   (no args = all)
 """
 import sys

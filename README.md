@@ -9,7 +9,8 @@ per-basin calibrated conceptual model (HBV, MARRMoT). Beyond accuracy (KGE/NSE),
 with synthetic forcing (a six-year drought and record storms of increasing size) and scored on
 plausibility checks for **mass balance**, **drought recession** and **flood response**.
 
-The repository contains code only. Input data, model outputs and figures are not tracked; see [Data](#data).
+The repository contains the code and the paper figures (`fig/`) and their tables (`out/tables/`). Input data and model outputs
+are not tracked; see [Data](#data).
 
 ## Study design
 
@@ -43,7 +44,9 @@ Numbered folders are run, in order; the other folders are libraries and settings
 | `config/` | `experiment.py` (paths, design, hyperparameters), `plot_style.py` (figure colours, fonts, sizes) |
 | `core/`, `features/`, `models/` | data access and run I/O, tree feature table, network architectures |
 | `basins/` | `basin_sets.csv` (637-basin training pool and evaluation set) |
-| `data/`, `out/`, `fig/` | inputs, outputs, figures (created locally, not tracked) |
+| `fig/` | paper figures (PNG; PDF in `fig/pdf/`), as published |
+| `out/tables/` | the tables of the paper figures (`csv*`, `scsv*`), as published |
+| `data/`, rest of `out/` | inputs and model outputs (created locally, not tracked) |
 
 ## Setup
 
@@ -78,7 +81,8 @@ data/
 ## Running
 
 All commands are run from the repository root. Outputs go to `out/` (runs, tuning, analysis tables,
-logs) and figures to `fig/`; override with `HSP_OUT_ROOT` / `HSP_FIG_ROOT`.
+logs, figure tables in `out/tables/`) and figures to `fig/`; override with `HSP_OUT_ROOT` / `HSP_FIG_ROOT`.
+Running the figure scripts overwrites the committed figures and tables; set both variables to keep them.
 
 ### 1. Inputs
 
@@ -160,8 +164,8 @@ The driver waits for the HBV run before the completeness check.
 | Variable | Default | Meaning |
 |---|---|---|
 | `HSP_DATA_ROOT` | `data/` | input data |
-| `HSP_OUT_ROOT` | `out/` | runs, tuning, analysis tables, logs |
-| `HSP_FIG_ROOT` | `fig/` | figures and figure tables |
+| `HSP_OUT_ROOT` | `out/` | runs, tuning, analysis tables, figure tables (`tables/`), logs |
+| `HSP_FIG_ROOT` | `fig/` | figures (PNG, PDF in `pdf/`) |
 | `HSP_BASIN_DIR` | `basins/` | `basin_sets.csv`, `hbv_failures.csv` |
 | `HSP_FONT_DIR` | `config/fonts/` | optional `.ttf` files for the figures |
 | `HSP_SMOKE` | `0` | smoke-test mode with that many basins |

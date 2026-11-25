@@ -1,7 +1,7 @@
 """fig03  mass balance: volume error, water created / lost, observed vs simulated implied ET
 Tables: csv03_mass_balance, csv03b_water_balance_flag_overlap
 
-Outputs: fig/<name>.png, fig/pdf/<name>.pdf, fig/<table>.csv
+Outputs: fig/<name>.png, fig/pdf/<name>.pdf, out/tables/<table>.csv
 Usage: python 08_figures/fig03_mass_balance.py [fig03 csv03 csv03b]   (no args = all)
 """
 import sys

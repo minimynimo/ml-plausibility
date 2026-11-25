@@ -2,7 +2,7 @@
 s01    calibration vs test CDFs, KGE (top) / NSE (bottom)
 Tables: csv01_accuracy_KGE, csv01b_share_KGE_below_0.6, csv01c_share_KGE_below_0, scsv02_accuracy_NSE
 
-Outputs: fig/<name>.png, fig/pdf/<name>.pdf, fig/<table>.csv
+Outputs: fig/<name>.png, fig/pdf/<name>.pdf, out/tables/<table>.csv
 Usage: python 08_figures/fig01_s01_accuracy.py [fig01 s01 csv01 csv01b csv01c scsv02]   (no args = all)
 """
 import sys

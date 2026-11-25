@@ -2,7 +2,7 @@
 s02    SHAP: tree engineered families, Precip share by flow state
 Tables: csv02_shap_shares
 
-Outputs: fig/<name>.png, fig/pdf/<name>.pdf, fig/<table>.csv
+Outputs: fig/<name>.png, fig/pdf/<name>.pdf, out/tables/<table>.csv
 Usage: python 08_figures/fig02_s02_shap.py [fig02 s02 csv02]   (no args = all)
 """
 import sys

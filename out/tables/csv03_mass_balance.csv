@@ -1,0 +1,12 @@
+Model,Strategy,Volume error median [%],Volume error IQR [%],Creates water [% basins],Loses water [% basins],Any violation [% basins]
+HBV,individual,4.88,-3.62 to 16.51,0.00,4.24,4.24
+RF,individual,5.44,-2.89 to 18.13,2.04,4.71,6.75
+RF,regional,6.41,-1.29 to 16.59,2.51,4.08,6.59
+XGB,individual,6.24,-3.58 to 18.37,2.04,4.87,6.91
+XGB,regional,5.47,-2.74 to 16.83,2.20,4.55,6.75
+TCN,individual,-0.52,-9.37 to 12.11,2.35,10.20,12.72
+TCN,regional,-0.22,-8.65 to 8.87,1.88,6.91,8.79
+TCN,adapted,-0.72,-8.36 to 7.08,1.88,7.38,9.11
+LSTM,individual,0.29,-9.38 to 11.95,2.20,9.73,12.09
+LSTM,regional,2.57,-5.87 to 12.82,2.04,6.44,8.63
+LSTM,adapted,4.56,-3.37 to 14.06,2.20,5.18,7.38

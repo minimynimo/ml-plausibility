@@ -1,6 +1,6 @@
 """Shared settings and helpers of the paper figure scripts in 08_figures (fig01_s01_accuracy.py ...
 fig06_s04_ranking.py). Every number comes from the saved analysis outputs (out/analysis); figures are
-written to fig/ (PNG) and fig/pdf (PDF), their data tables to fig/ as CSV."""
+written to fig/ (PNG) and fig/pdf (PDF), their data tables to out/tables as CSV."""
 import json
 import sys
 from pathlib import Path
@@ -114,7 +114,7 @@ def accuracy_composite_panel(ax, t):
 
 
 # ------------------------------------------------------------------------------------------
-# Paper tables: csvNN aligned with figNN (scsvNN with sNN), written to fig/, 2 decimals.
+# Paper tables: csvNN aligned with figNN (scsvNN with sNN), written to out/tables/, 2 decimals.
 # Rows grouped by model (HBV first, then RF, XGB, TCN, LSTM), strategies in order ind / reg / ada.
 # ------------------------------------------------------------------------------------------
 def f2(v):
@@ -122,7 +122,8 @@ def f2(v):
 
 
 def save_table(df, name):
-    df.to_csv(OUT / f"{name}.csv", index=False)
+    E.TABLE_DIR.mkdir(parents=True, exist_ok=True)
+    df.to_csv(E.TABLE_DIR / f"{name}.csv", index=False)
 
 
 def combo_rows():

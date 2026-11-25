@@ -1,0 +1,6 @@
+Model,Strategy,N basins,N KGE<0.6,Share KGE<0.6 [%]
+HBV,individual,637,221,34.7
+RF,regional,637,206,32.3
+XGB,regional,637,145,22.8
+TCN,regional,637,144,22.6
+LSTM,regional,637,136,21.4

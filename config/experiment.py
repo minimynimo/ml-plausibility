@@ -34,7 +34,7 @@ EXCLUDED_BASINS = {
 }
 SMOKE = int(_os.environ.get("HSP_SMOKE", 0))   # >0: end-to-end test mode with that many basins
 BASIN_DIR = Path(_os.environ.get("HSP_BASIN_DIR", REPO_ROOT / "basins"))   # basin_sets.csv, hbv_failures.csv
-# OUT_ROOT holds runs/, tuning/, analysis/<type>/, _markers, _logs, _driver and _code_snapshot.
+# OUT_ROOT holds runs/, tuning/, analysis/<type>/, tables/, _markers, _logs, _driver and _code_snapshot.
 OUT_ROOT = Path(_os.environ.get("HSP_OUT_ROOT", REPO_ROOT / "out"))
 if SMOKE:
     BASIN_DIR = OUT_ROOT / "basins"
@@ -48,6 +48,7 @@ ANALYSIS_FLOOD_DIR = ANALYSIS_DIR / "flood"
 ANALYSIS_SCORING_DIR = ANALYSIS_DIR / "scoring"
 ANALYSIS_SHAP_DIR = ANALYSIS_DIR / "shap"
 FIG_DIR = Path(_os.environ.get("HSP_FIG_ROOT", REPO_ROOT / "fig"))
+TABLE_DIR = OUT_ROOT / "tables"                      # paper tables (csvNN / scsvNN) of 08_figures
 LOG_DIR = OUT_ROOT / "_logs"
 MARK_DIR = OUT_ROOT / "_markers"
 DRIVER_DIR = OUT_ROOT / "_driver"

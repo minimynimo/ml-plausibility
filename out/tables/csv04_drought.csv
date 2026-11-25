@@ -1,0 +1,12 @@
+Model,Strategy,Mean Q 2002–2006 median [mm/d],IQR [mm/d],Basins with Q < 0.01 mm/d [%]
+HBV,individual,0.00,0.00 to 0.00,98.90
+RF,individual,0.29,0.07 to 0.58,6.75
+RF,regional,0.23,0.03 to 0.51,14.44
+XGB,individual,0.36,0.11 to 0.64,3.92
+XGB,regional,0.23,0.05 to 0.60,6.91
+TCN,individual,0.18,0.05 to 0.45,7.85
+TCN,regional,0.04,0.00 to 0.19,39.09
+TCN,adapted,0.04,0.00 to 0.18,41.29
+LSTM,individual,0.26,0.09 to 0.54,4.40
+LSTM,regional,0.09,0.01 to 0.30,27.32
+LSTM,adapted,0.10,0.01 to 0.30,23.86
